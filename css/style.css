@@ -1,0 +1,97 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'OngleipParkDahyeon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+* {
+    font-family: 'OngleipParkDahyeon';
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.lock-container {
+    width: 300px;
+    text-align: center;
+}
+h2 {
+    font-size: 2rem;
+}
+.pin-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.pin {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.pin.filled {
+    background: white;
+    border: 2px solid #fff;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.keypad button {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    font-size: 22px;
+    border-radius: 50%;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.keypad button:active {
+    background: #444;
+}
+
+.keypad .empty {
+    visibility: hidden;
+}
+
+/* 틀렸을 때 흔들림 */
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
